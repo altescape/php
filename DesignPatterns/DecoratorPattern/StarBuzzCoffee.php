@@ -54,6 +54,16 @@ class StarBuzzCoffee {
 
         echo "\n\n ====================== \n\n";
 
+        $beverage5 = new Bev_DarkRoast();
+        $beverage5 = new Cnd_SteamedMilk($beverage5);
+        $beverage5 = new Cnd_Soy($beverage5);
+        $beverage5 = new Cnd_Mocha($beverage5);
+        $beverage5 = new Cnd_Mocha($beverage5);
+        $beverage5 = new Sze_SuperMassive($beverage5);
+        echo "5: " . $beverage5->getDescription() . " $" . $beverage5->cost();
+
+        echo "\n\n ====================== \n\n";
+
     }
 
 }
