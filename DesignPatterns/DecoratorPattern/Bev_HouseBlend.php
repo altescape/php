@@ -5,19 +5,17 @@
  * Time: 09:30
  */
 
-namespace decorator_pattern;
+namespace DesignPatterns\DecoratorPattern;
 
-require_once "BeverageInterface.php";
-
-class Bev_Espresso implements BeverageInterface {
+class Bev_HouseBlend implements BeverageInterface {
 
     public function getDescription()
     {
-        return "Espresso";
+        return "House Blend";
     }
 
     public function cost()
     {
-        return 1.99;
+        return .89;
     }
 }

@@ -5,9 +5,7 @@
  * Time: 09:26
  */
 
-namespace decorator_pattern;
-
-require_once "BeverageInterface.php";
+namespace DesignPatterns\DecoratorPattern;
 
 abstract class CondimentDecorator implements BeverageInterface
 {

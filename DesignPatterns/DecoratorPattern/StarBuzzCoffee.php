@@ -7,24 +7,9 @@
  * Using Decorator Pattern for Starbuzz Coffee orders
  */
 
-namespace decorator_pattern;
+namespace DesignPatterns\DecoratorPattern;
 
-// Beverages
-require_once "Bev_Espresso.php";
-require_once "Bev_HouseBlend.php";
-require_once "Bev_DarkRoast.php";
-
-// Condiments
-require_once "Cnd_Mocha.php";
-require_once "Cnd_Whip.php";
-require_once "Cnd_Soy.php";
-require_once "Cnd_SteamedMilk.php";
-
-// Sizes
-require_once "Sze_Small.php";
-require_once "Sze_Medium.php";
-require_once "Sze_Large.php";
-require_once "Sze_SuperMassive.php";
+require_once '../../loader.php';
 
 /**
  * Class StarBuzzCoffee

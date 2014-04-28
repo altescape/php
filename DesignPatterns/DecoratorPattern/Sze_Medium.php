@@ -5,12 +5,9 @@
  * Time: 09:34
  */
 
-namespace decorator_pattern;
+namespace DesignPatterns\DecoratorPattern;
 
-require_once "CondimentDecorator.php";
-
-
-class Cnd_SteamedMilk extends CondimentDecorator {
+class Sze_Medium extends SizeDecorator {
 
     public $beverage;
 
@@ -22,12 +19,12 @@ class Cnd_SteamedMilk extends CondimentDecorator {
     public function getDescription()
     {
 
-        return $this->beverage->getDescription() . ", Steamed Milk";
+        return $this->beverage->getDescription() . ", Medium";
     }
 
     public function cost()
     {
-        return .1 + $this->beverage->cost();
+        return 1.50 + $this->beverage->cost();
     }
 
 } 

@@ -5,11 +5,9 @@
  * Time: 09:34
  */
 
-namespace decorator_pattern;
+namespace DesignPatterns\DecoratorPattern;
 
-require_once "SizeDecorator.php";
-
-class Sze_Small extends SizeDecorator {
+class Cnd_Mocha extends CondimentDecorator {
 
     public $beverage;
 
@@ -21,12 +19,12 @@ class Sze_Small extends SizeDecorator {
     public function getDescription()
     {
 
-        return $this->beverage->getDescription() . ", Small";
+        return $this->beverage->getDescription() . ", Mocha";
     }
 
     public function cost()
     {
-        return 1 + $this->beverage->cost();
+        return .2 + $this->beverage->cost();
     }
 
-} 
+}

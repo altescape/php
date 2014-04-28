@@ -5,11 +5,9 @@
  * Time: 09:34
  */
 
-namespace decorator_pattern;
+namespace DesignPatterns\DecoratorPattern;
 
-require_once "SizeDecorator.php";
-
-class Sze_SuperMassive extends SizeDecorator {
+class Cnd_Soy extends CondimentDecorator {
 
     public $beverage;
 
@@ -21,12 +19,12 @@ class Sze_SuperMassive extends SizeDecorator {
     public function getDescription()
     {
 
-        return $this->beverage->getDescription() . ", Super Massive";
+        return $this->beverage->getDescription() . ", Soy";
     }
 
     public function cost()
     {
-        return 5.00 + $this->beverage->cost();
+        return .15 + $this->beverage->cost();
     }
 
 } 
