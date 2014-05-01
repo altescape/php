@@ -27,7 +27,6 @@ $knight = (new Character())
     ->setMomentum((new MomentumClass())->momentumFunction())
     ->setAccess("Suits of armour");
 
-
 echo $knight;
 
 echo "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n";
