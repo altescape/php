@@ -25,13 +25,14 @@ $knight = (new Character())
     ->setMomentum((new MomentumClass())->momentumFunction())
     ->setAccess("Suits of armour");
 
+
 echo $knight;
 
 echo "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n";
 
 $wizard = (new Character())
     ->setName("Wizard")
-    ->setWeapon("Wizard's Fire")
+    ->setWeapon("Magic flying balls")
     ->setMomentum(5)
     ->setAccess("Bookcases");
 
