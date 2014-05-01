@@ -8,7 +8,7 @@
 namespace DesignPatterns\FactoryPattern3;
 
 
-abstract class CharacterFactory {
+abstract class CharacterFactory implements CharacterInterface {
 
     public function create()
     {
