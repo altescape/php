@@ -25,11 +25,6 @@ class Character extends CharacterFactory {
         return $string;
     }
 
-    function __construct()
-    {
-        echo "\nA Character has been chosen\n\n";
-    }
-
     /**
      * @param mixed $momentum
      * @return $this
