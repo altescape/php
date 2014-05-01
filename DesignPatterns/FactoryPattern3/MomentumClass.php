@@ -8,7 +8,7 @@
 namespace DesignPatterns\FactoryPattern3;
 
 
-class MomentumClass extends CharacterFactory {
+class MomentumClass extends Character {
 
     /**
      * @param $momentum
@@ -46,13 +46,22 @@ class MomentumClass extends CharacterFactory {
         return $access;
     }
 
+    /**
+     * @param $speed
+     * @return mixed
+     */
+    public function setSpeed($speed)
+    {
+        return $speed;
+    }
+
     # Added functionality
     /**
      * @return mixed
      */
     public function momentumFunction()
     {
-        $updated_function = "Momentum function called here";
+        $updated_function = "Momentum function called here hello";
         return $this->setMomentum($updated_function);
     }
 

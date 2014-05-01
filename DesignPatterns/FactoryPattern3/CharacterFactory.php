@@ -8,10 +8,10 @@
 namespace DesignPatterns\FactoryPattern3;
 
 
-abstract class CharacterFactory implements CharacterInterface {
+abstract class CharacterFactory {
 
-    public function create($name, $weapon, $momentum, $access)
+    public function create()
     {
-        return new Character($name, $weapon, $momentum, $access);
+        return new Character();
     }
 }

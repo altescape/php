@@ -14,6 +14,7 @@ class Character extends CharacterFactory {
     protected $weapon;
     protected $momentum;
     protected $access;
+    protected $speed;
 
     function __toString()
     {
@@ -21,18 +22,9 @@ class Character extends CharacterFactory {
         $string .= "Weapon: $this->weapon\n";
         $string .= "Momentum: $this->momentum\n";
         $string .= "Secret Passage: $this->access\n";
+        $string .= "Speed: $this->speed\n";
 
         return $string;
-    }
-
-    /**
-     * @param mixed $momentum
-     * @return $this
-     */
-    public function setMomentum($momentum)
-    {
-        $this->momentum = $momentum;
-        return $this;
     }
 
     /**
@@ -56,12 +48,28 @@ class Character extends CharacterFactory {
     }
 
     /**
+     * @param mixed $momentum
+     * @return $this
+     */
+    public function setMomentum($momentum)
+    {
+        $this->momentum = $momentum;
+        return $this;
+    }
+
+    /**
      * @param $access
      * @return $this
      */
     public function setAccess($access)
     {
         $this->access = $access;
+        return $this;
+    }
+
+    public function setSpeed($speed)
+    {
+        $this->speed = $speed;
         return $this;
     }
 
