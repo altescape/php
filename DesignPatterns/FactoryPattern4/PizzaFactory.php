@@ -8,16 +8,22 @@
 namespace DesignPatterns\FactoryPattern4;
 
 
-class PizzaFactory {
+abstract class PizzaFactory {
 
-    function __construct($type)
+    protected $type;
+
+    abstract protected function getType();
+
+    public function makePizza()
     {
-        switch($type) {
-            case "NY Cheese" :
-                return new NyPizzaCheese();
+        switch($this->getType()) {
+            case "New York Cheese Pizza" :
+                print $this->getType() . PHP_EOL;
+                return new NyPizzaCheese($this->type);
                 break;
-            case "Chicago Ham" :
-                return new ChPizzaHam();
+            case "Chicago Ham Pizza" :
+                print $this->getType() . PHP_EOL;
+                return new ChPizzaHam($this->type);
                 break;
             default :
                 die("pizza not found");

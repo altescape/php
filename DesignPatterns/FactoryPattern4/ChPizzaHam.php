@@ -8,10 +8,10 @@
 namespace DesignPatterns\FactoryPattern4;
 
 
-class ChPizzaHam {
+class ChPizzaHam extends PizzaFactory {
 
-    function __construct()
+    protected function getType()
     {
-        echo "Chicago Ham Pizza";
+        return "Chicago Ham Pizza";
     }
 }

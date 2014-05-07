@@ -8,10 +8,10 @@
 namespace DesignPatterns\FactoryPattern4;
 
 
-class NyPizzaCheese {
+class NyPizzaCheese extends PizzaFactory {
 
-    function __construct()
+    protected function getType()
     {
-        echo "New York Cheese Pizza";
+        return "New York Cheese Pizza";
     }
 }
