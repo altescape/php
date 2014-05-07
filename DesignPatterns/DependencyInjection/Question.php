@@ -12,7 +12,7 @@ class Question {
     private $author;
     private $question;
 
-    function __construct($question, Author $author)
+    function __construct($question, $author)
     {
         $this->author = $author;
         $this->question = $question;
