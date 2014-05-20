@@ -34,7 +34,7 @@ echo "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n";
 
 $wizard = (new Character())
     ->setName("Wizard")
-    ->setWeapon("Magic flying balls")
+    ->setWeapon("Magic fire balls")
     ->setMomentum(5)
     ->setSpeed(2)
     ->setAccess("Bookcases");
