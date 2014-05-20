@@ -38,6 +38,14 @@ class Character extends CharacterFactory {
     }
 
     /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
      * @param mixed $weapon
      * @return $this
      */
@@ -45,6 +53,14 @@ class Character extends CharacterFactory {
     {
         $this->weapon = $weapon;
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWeapon()
+    {
+        return $this->weapon;
     }
 
     /**
@@ -58,6 +74,14 @@ class Character extends CharacterFactory {
     }
 
     /**
+     * @return mixed
+     */
+    public function getMomentum()
+    {
+        return $this->momentum;
+    }
+
+    /**
      * @param $access
      * @return $this
      */
@@ -67,10 +91,26 @@ class Character extends CharacterFactory {
         return $this;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getAccess()
+    {
+        return $this->access;
+    }
+
     public function setSpeed($speed)
     {
         $this->speed = $speed;
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSpeed()
+    {
+        return $this->speed;
     }
 
 }

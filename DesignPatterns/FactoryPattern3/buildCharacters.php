@@ -15,7 +15,6 @@ $serf = (new Character())
     ->setMomentum(10)
     ->setSpeed(10)
     ->setAccess("Barrels");
-//$serf = new Speed($serf);
 
 echo $serf;
 
