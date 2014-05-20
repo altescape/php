@@ -9,6 +9,8 @@ namespace DesignPatterns\FactoryPattern3;
 
 require_once '../../loader.php';
 
+echo "<pre>";
+
 $serf = (new Character())
     ->setName("Serf")
     ->setWeapon("Knives")
@@ -39,3 +41,5 @@ $wizard = (new Character())
     ->setAccess("Bookcases");
 
 echo $wizard;
+
+echo "</pre>";
