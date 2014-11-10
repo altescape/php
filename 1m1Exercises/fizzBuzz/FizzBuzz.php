@@ -13,12 +13,12 @@ class FizzBuzz {
 	function __construct($minimum = 1, $maximum = 100)
 	{
 
-		if (!is_int($minimum) || !is_int($maximum)) {
-			throw new Exception('You did not enter a valid number. Please enter a valid number');
+		if ( !is_int($minimum) || !is_int($maximum) ) {
+			throw new InvalidArgumentException('FizzBuzz class only accepts integers. Input was: '. $minimum . ', ' . $maximum);
 		}
 
 		if ($minimum >= $maximum) {
-			throw new Exception('Minimum greater than maximum. Set number for minimum to be less than the maximum.');
+			throw new InvalidArgumentException('Minimum greater than maximum. Set number for minimum to be less than the maximum. Input was: '. $minimum . ', ' . $maximum);
 		}
 
 		$this->minimum = $minimum;

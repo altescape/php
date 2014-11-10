@@ -21,17 +21,46 @@ class FizzBuzzTest extends PHPUnit_Framework_TestCase
 	public function setUp(){}
 	public function tearDown(){}
 
-	public function testCount()
+	public function testToString()
 	{
 		$fizzBuzz = new FizzBuzz();
-		echo $fizzBuzz;
+//		echo $fizzBuzz;
 	}
 
 	public function testForString()
 	{
 		$fizzBuzz = new FizzBuzz();
 		$findMultiples = $fizzBuzz->findMultiples();
+//		print($findMultiples);
+	}
+
+	public function testChangeValues()
+	{
+		$fizzBuzz = new FizzBuzz(5, 333);
+		$findMultiples = $fizzBuzz->findMultiples();
 		print($findMultiples);
+	}
+
+	/**
+	 * @expectedException InvalidArgumentException
+	 */
+	public function testInvalidValues()
+	{
+		$fizzBuzz = new FizzBuzz('asd', 2);
+		$findMultiples = $fizzBuzz->findMultiples();
+		print($findMultiples);
+		$this->assertType('InvalidArgumentException', $findMultiples);
+	}
+
+	/**
+	 * @expectedException InvalidArgumentException
+	 */
+	public function testInvalidRange()
+	{
+		$fizzBuzz = new FizzBuzz(10, 2);
+		$findMultiples = $fizzBuzz->findMultiples();
+		print($findMultiples);
+		$this->assertType('InvalidArgumentException', $findMultiples);
 	}
 
 }
