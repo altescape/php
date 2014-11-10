@@ -3,6 +3,28 @@
  * Created: michaelwatts
  * Date: 09/11/14
  * Time: 13:26
+ * 
+ * FIZZBUZZ
+ * 
+ * A program that prints the numbers from 1 to 100.
+ * - For multiples of three it prints "Fizz" instead of the number.
+ * - For multiples of five it print "Buzz".
+ * - For numbers which are multiples of both three and five it prints "FizzBuzz".
+ * 
+ * 
+ * USE:
+ * 	// With default values of range 1..100: 
+ * 	$fizzBuzz = new FizzBuzz();
+ * 	echo $fizzBuzz;
+ * 
+ * 	// To enter your own range: 
+ * 	$fizzBuzz = new FizzBuzz(n, n);
+ * 	echo $fizzBuzz;
+ * 
+ * 
+ * ERROR CHECKING:
+ * - If entering anything other than an integer the program will fail.
+ * - If entering a minimum value greater than the maximum value the program will fail.
  */
 
 class FizzBuzz {
