@@ -18,7 +18,7 @@ class FizzBuzz {
 		}
 
 		if ($minimum >= $maximum) {
-			throw new InvalidArgumentException('Minimum greater than maximum. Set number for minimum to be less than the maximum. Input was: '. $minimum . ', ' . $maximum);
+			throw new InvalidArgumentException('Minimum number must be be less than maximum number. Input was: '. $minimum . ', ' . $maximum);
 		}
 
 		$this->minimum = $minimum;
