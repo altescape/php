@@ -9,6 +9,7 @@ namespace DesignPatterns\DependancyInjection;
 
 
 class Question {
+
     private $author;
     private $question;
 

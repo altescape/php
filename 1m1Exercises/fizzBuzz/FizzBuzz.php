@@ -57,7 +57,6 @@ class FizzBuzz {
 		return $isMultiple;
 	}
 
-
 	/**
 	 * Finds multiples
 	 *
@@ -86,7 +85,6 @@ class FizzBuzz {
 
 		return $aString;
 	}
-
 
 	/**
 	 * @return string
