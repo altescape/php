@@ -38,42 +38,43 @@ class FizzBuzz {
 		return $isMultiple;
 	}
 
+
 	/**
-	 * Returns an array of the results
+	 * Finds multiples
 	 *
-	 * @todo Needs cleaning/optimising I feel, as FIZZBUZZ shouldn't be necessary because FIZZ and BUZZ already there.
-	 *
-	 * But then does it make things more complicated if an update later requires
-	 * for instance a change to FIZZ, BUZZ, FIZZFLOP???
-	 *
-	 * @return array
+	 * @return string
 	 */
 	public function findMultiples()
 	{
-		$anArray = [];
+		$aString = '';
 
 		for($i = $this->minimum; $i <= $this->maximum; $i++) {
-			if ($this->isNumberMultipleOf($i, 3) && $this->isNumberMultipleOf($i, 5))
-				$anArray[] = 'FIZZBUZZ';
 
-			else if ($this->isNumberMultipleOf($i, 3))
-				$anArray[] = 'FIZZ';
+			$fizz = $this->isNumberMultipleOf($i, 3);
+			$buzz = $this->isNumberMultipleOf($i, 5);
 
-			else if ($this->isNumberMultipleOf($i, 5))
-				$anArray[] = 'BUZZ';
+			if ($fizz)
+				$aString .= 'FIZZ';
 
-			else $anArray[] = $i;
+			if ($buzz)
+				$aString .= 'BUZZ';
+
+			if (!($fizz || $buzz))
+				$aString .= $i;
+
+			$aString .= PHP_EOL;
 		}
 
-		return $anArray;
+		return $aString;
 	}
+
 
 	/**
 	 * @return string
 	 */
 	public function __toString()
 	{
-		return implode(',', $this->findMultiples());
+		return $this->findMultiples();
 	}
 
 }
