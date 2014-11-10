@@ -26,7 +26,8 @@ class FizzBuzz {
 	}
 
 	/**
-	 * isNumberMultipleOf
+	 * Returns true if the $number supplied is a multiple of $multiple
+	 *
 	 * @param $number
 	 * @param $multiple
 	 * @return bool
@@ -38,6 +39,13 @@ class FizzBuzz {
 	}
 
 	/**
+	 * Returns an array of the results
+	 *
+	 * @todo Needs cleaning/optimising I feel, as FIZZBUZZ shouldn't be necessary because FIZZ and BUZZ already there.
+	 *
+	 * But then does it make things more complicated if an update later requires
+	 * for instance a change to FIZZ, BUZZ, FIZZFLOP???
+	 *
 	 * @return array
 	 */
 	public function findMultiples()
