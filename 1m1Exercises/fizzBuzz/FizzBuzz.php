@@ -12,7 +12,6 @@ class FizzBuzz {
 
 	function __construct($minimum = 1, $maximum = 100)
 	{
-
 		if ( !is_int($minimum) || !is_int($maximum) )
 			throw new InvalidArgumentException('FizzBuzz class only accepts integers. Input was: '. $minimum . ', ' . $maximum);
 
