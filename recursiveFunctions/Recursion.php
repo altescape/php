@@ -5,7 +5,7 @@
  * Time: 16:37
  */
 
-class recursiveNumber
+class RecursiveNumber
 {
 
     public function recursiveFunction($number)
@@ -22,10 +22,10 @@ class recursiveNumber
     }
 }
 
-//$recursion = new recursiveNumber();
+//$recursion = new RecursiveNumber();
 //$recursion->recursiveFunction(5);
 
-class emptyHandBag
+class EmptyHandBag
 {
     public $table = [];
 
@@ -34,8 +34,12 @@ class emptyHandBag
         $tableCopy = $table;
         $itemsCopy = $items;
 
-        var_dump(['BAG' => $itemsCopy]);
-        var_dump(['TABLE' => $table]);
+//        var_dump(['BAG' => $itemsCopy]);
+//        var_dump(['TABLE' => $table]);
+
+        echo 'Emptying bag onto table.' . PHP_EOL;
+        echo 'Bag contains: ' . implode(', ', $itemsCopy) . PHP_EOL;
+        echo 'Table has on it: ' . implode(', ', $tableCopy) . PHP_EOL  . PHP_EOL;
 
         if (count($itemsCopy) < 0)
             throw new InvalidArgumentException('Cannot remove no items');
@@ -45,11 +49,12 @@ class emptyHandBag
 
         } else {
             $tableCopy[] = array_shift($itemsCopy);
+            sleep(2);
             return $this->emptyThingsOut($itemsCopy, $tableCopy);
         }
 
     }
 }
 
-$emptyBag = new emptyHandBag();
+$emptyBag = new EmptyHandBag();
 $emptyBag->emptyThingsOut(['purse', 'lipstick', 'tissue', 'cough sweet'], $emptyBag->table);
