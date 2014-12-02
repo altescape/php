@@ -5,9 +5,9 @@
  * Time: 09:34
  */
 
-namespace DesignPatterns\DecoratorPattern\DecoratorPattern;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern\Condiments;
 
-class Cnd_Mocha extends CondimentDecorator {
+class Cnd_WhippedCream extends CondimentDecorator {
 
     public $beverage;
 
@@ -19,12 +19,12 @@ class Cnd_Mocha extends CondimentDecorator {
     public function getDescription()
     {
 
-        return $this->beverage->getDescription() . ", Mocha";
+        return $this->beverage->getDescription() . ", Whipped Cream";
     }
 
     public function cost()
     {
-        return .2 + $this->beverage->cost();
+        return .4 + $this->beverage->cost();
     }
 
-}
+} 

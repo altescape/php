@@ -5,9 +5,10 @@
  * Time: 09:34
  */
 
-namespace DesignPatterns\DecoratorPattern\DecoratorPattern;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern\Sizes;
 
-class Sze_SuperMassive extends SizeDecorator {
+class Sze_SuperMassive extends SizeDecorator
+{
 
     public $beverage;
 
@@ -26,5 +27,4 @@ class Sze_SuperMassive extends SizeDecorator {
     {
         return 5.00 + $this->beverage->cost();
     }
-
 } 

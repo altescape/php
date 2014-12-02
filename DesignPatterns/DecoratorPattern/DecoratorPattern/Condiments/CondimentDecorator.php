@@ -5,7 +5,8 @@
  * Time: 09:26
  */
 
-namespace DesignPatterns\DecoratorPattern\DecoratorPattern;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern\Condiments;
+use DesignPatterns\DecoratorPattern\DecoratorPattern\BeverageInterface;
 
 abstract class CondimentDecorator implements BeverageInterface
 {

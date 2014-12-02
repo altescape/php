@@ -5,9 +5,9 @@
  * Time: 09:34
  */
 
-namespace DesignPatterns\DecoratorPattern\DecoratorPattern;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern\Condiments;
 
-class Sze_Large extends SizeDecorator {
+class Cnd_ChocSyrup extends CondimentDecorator {
 
     public $beverage;
 
@@ -19,12 +19,12 @@ class Sze_Large extends SizeDecorator {
     public function getDescription()
     {
 
-        return $this->beverage->getDescription() . ", Large";
+        return $this->beverage->getDescription() . ", Chocolate Syrup";
     }
 
     public function cost()
     {
-        return 2.00 + $this->beverage->cost();
+        return .2 + $this->beverage->cost();
     }
 
-} 
+}

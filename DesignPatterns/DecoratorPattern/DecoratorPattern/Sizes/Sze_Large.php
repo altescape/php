@@ -5,9 +5,10 @@
  * Time: 09:34
  */
 
-namespace DesignPatterns\DecoratorPattern\DecoratorPattern;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern\Sizes;
 
-class Cnd_Whip extends CondimentDecorator {
+class Sze_Large extends SizeDecorator
+{
 
     public $beverage;
 
@@ -19,12 +20,12 @@ class Cnd_Whip extends CondimentDecorator {
     public function getDescription()
     {
 
-        return $this->beverage->getDescription() . ", Whip";
+        return $this->beverage->getDescription() . ", Large";
     }
 
     public function cost()
     {
-        return .4 + $this->beverage->cost();
+        return 2.00 + $this->beverage->cost();
     }
 
 } 

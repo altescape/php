@@ -9,6 +9,21 @@
 
 namespace DesignPatterns\DecoratorPattern\DecoratorPattern;
 
+use DesignPatterns\DecoratorPattern\DecoratorPattern\Condiments\Cnd_ChocSyrup;
+use DesignPatterns\DecoratorPattern\DecoratorPattern\Condiments\Cnd_FoamedMilk;
+use DesignPatterns\DecoratorPattern\DecoratorPattern\Condiments\Cnd_HotWater;
+use DesignPatterns\DecoratorPattern\DecoratorPattern\Condiments\Cnd_SteamedMilk;
+use DesignPatterns\DecoratorPattern\DecoratorPattern\Condiments\Cnd_WhippedCream;
+
+use DesignPatterns\DecoratorPattern\DecoratorPattern\Roasts\Bean_LightRoast;
+use DesignPatterns\DecoratorPattern\DecoratorPattern\Roasts\Bean_MediumRoast;
+use DesignPatterns\DecoratorPattern\DecoratorPattern\Roasts\Bean_DarkRoast;
+
+use DesignPatterns\DecoratorPattern\DecoratorPattern\Sizes\Sze_Small;
+use DesignPatterns\DecoratorPattern\DecoratorPattern\Sizes\Sze_Medium;
+use DesignPatterns\DecoratorPattern\DecoratorPattern\Sizes\Sze_Large;
+use DesignPatterns\DecoratorPattern\DecoratorPattern\Sizes\Sze_SuperMassive;
+
 require_once '../../../loader.php';
 
 /**
@@ -36,60 +51,98 @@ require_once '../../../loader.php';
  *                          ooO--(_)--Ooo-
  *
  *
+ * StarBuzz Coffee is a coffeeshop chain
+ *
+ *
  * Class StarBuzzCoffee
  * Builds the orders
  * @package decorator_pattern
  */
-class StarBuzzCoffee {
-
+class StarBuzzCoffee
+{
     function __construct()
     {
-        echo "\n\n ====================== \n\n";
-
-        $beverage = new Bev_Espresso();
-        $beverage = new Sze_Medium($beverage);
-        echo "1: " . $beverage->getDescription() . " $" . $beverage->cost();
-
-        echo "\n\n ====================== \n\n";
-
-//        $beverage2 = new Bev_HouseBlend();
-//        $beverage2 = new Cnd_Mocha($beverage2);
-//        $beverage2 = new Cnd_Mocha($beverage2);
-//        $beverage2 = new Cnd_Whip($beverage2);
-//        $beverage2 = new Sze_SuperMassive($beverage2);
-//        echo "2: " . $beverage2->getDescription() . " $" . $beverage2->cost();
-//
-//        echo "\n\n ====================== \n\n";
-//
-//        $beverage3 = new Bev_DarkRoast();
-//        $beverage3 = new Cnd_Mocha($beverage3);
-//        $beverage3 = new Cnd_Soy($beverage3);
-//        $beverage3 = new Cnd_SteamedMilk($beverage3);
-//        $beverage3 = new Sze_Large($beverage3);
-//        echo "3: " . $beverage3->getDescription() . " $" . $beverage3->cost();
-//
-//        echo "\n\n ====================== \n\n";
-//
-//        $beverage4 = new Bev_Espresso();
-//        $beverage4 = new Cnd_SteamedMilk($beverage4);
-//        $beverage4 = new Sze_Small($beverage4);
-//        echo "4: " . $beverage4->getDescription() . " $" . $beverage4->cost();
-//
-//        echo "\n\n ====================== \n\n";
-//
-//        $beverage5 = new Bev_DarkRoast();
-//        $beverage5 = new Cnd_SteamedMilk($beverage5);
-//        $beverage5 = new Cnd_Soy($beverage5);
-//        $beverage5 = new Cnd_Mocha($beverage5);
-//        $beverage5 = new Cnd_Mocha($beverage5);
-//        $beverage5 = new Sze_SuperMassive($beverage5);
-//        echo "5: " . $beverage5->getDescription() . " $" . $beverage5->cost();
-//
-//        echo "\n\n ====================== \n\n";
-
     }
-
 }
+//new StarBuzzCoffee();
 
-// Call the order
-new StarBuzzCoffee();
+final class FlatWhite
+{
+    function __construct()
+    {
+        $beverage = new Bean_DarkRoast();
+        $beverage = new Shot_Espresso($beverage);
+        $beverage = new Shot_Espresso($beverage);
+        $beverage = new Cnd_SteamedMilk($beverage);
+        $beverage = new Sze_Small($beverage);
+
+        echo($beverage->getDescription() . " $" . $beverage->cost()) . PHP_EOL;
+    }
+}
+// Order Flat White
+new FlatWhite();
+
+final class Espresso
+{
+    function __construct()
+    {
+        $beverage = new Bean_MediumRoast();
+        $beverage = new Shot_Espresso($beverage);
+        $beverage = new Sze_Small($beverage);
+
+        echo($beverage->getDescription() . " $" . $beverage->cost()) . PHP_EOL;
+    }
+}
+// Order Espresso
+new Espresso();
+
+final class CaffeLatte
+{
+    function __contruct()
+    {
+        $beverage = new Bean_LightRoast();
+        $beverage = new Shot_Espresso($beverage);
+        $beverage = new Cnd_SteamedMilk($beverage);
+        $beverage = new Cnd_FoamedMilk($beverage);
+        $beverage = new Sze_Medium($beverage);
+
+        echo($beverage->getDescription() . " $" . $beverage->cost()) . PHP_EOL;
+    }
+}
+// Order Café Latte
+new CaffeLatte();
+
+final class CaffeMocha
+{
+    function __construct()
+    {
+        $beverage = new Bean_DarkRoast();
+        $beverage = new Shot_Espresso($beverage);
+        $beverage = new Cnd_ChocSyrup($beverage);
+        $beverage = new Cnd_SteamedMilk($beverage);
+        $beverage = new Cnd_WhippedCream($beverage);
+        $beverage = new Sze_SuperMassive($beverage);
+
+        echo($beverage->getDescription() . " $" . $beverage->cost()) . PHP_EOL;
+    }
+}
+// Order Caffé Mocha
+new CaffeMocha();
+
+final class Americano
+{
+    function __construct()
+    {
+        $beverage = new Bean_MediumRoast();
+        $beverage = new Shot_Espresso($beverage);
+        $beverage = new Cnd_HotWater($beverage);
+        $beverage = new Cnd_HotWater($beverage);
+        $beverage = new Cnd_HotWater($beverage);
+        $beverage = new Sze_Large($beverage);
+
+        echo($beverage->getDescription() . " $" . $beverage->cost()) . PHP_EOL;
+    }
+}
+// Order Americano
+new Americano();
+

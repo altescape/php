@@ -5,9 +5,11 @@
  * Time: 09:30
  */
 
-namespace DesignPatterns\DecoratorPattern\DecoratorPattern;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern\Roasts;
+use DesignPatterns\DecoratorPattern\DecoratorPattern\BeverageInterface;
 
-class Bev_DarkRoast implements BeverageInterface {
+class Bean_DarkRoast implements BeverageInterface
+{
 
     public function getDescription()
     {

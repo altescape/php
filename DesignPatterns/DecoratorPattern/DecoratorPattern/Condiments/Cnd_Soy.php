@@ -5,7 +5,7 @@
  * Time: 09:34
  */
 
-namespace DesignPatterns\DecoratorPattern\DecoratorPattern;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern\Condiments;
 
 class Cnd_Soy extends CondimentDecorator {
 

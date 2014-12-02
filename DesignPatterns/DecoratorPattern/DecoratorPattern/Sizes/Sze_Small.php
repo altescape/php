@@ -5,9 +5,10 @@
  * Time: 09:34
  */
 
-namespace DesignPatterns\DecoratorPattern\DecoratorPattern;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern\Sizes;
 
-class Sze_Small extends SizeDecorator {
+class Sze_Small extends SizeDecorator
+{
 
     public $beverage;
 
