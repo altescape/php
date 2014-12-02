@@ -11,11 +11,11 @@ namespace DesignPatterns\DecoratorPattern3;
 class Drink extends DrinksContainerDecorator implements DrinkInterface
 {
 	public $temperature; 	// descriptor: ice-cold, room-temperature, hot
-	public $colour; 		// brown, red, clear
-	public $name; 			// tea, coffee, water
+	public $colour; 			// brown, red, clear
+	public $name; 				// tea, coffee, water
 	public $condiments; 	// what do we add to it; ie milk, sugar, ice-cubes
 	public $container; 		// is it served in a tea cup, beer glass
-	public $result;			// what result it has on the drinker, ie. drunk, revives, makes alert, gives strength(??)
+	public $result;				// what result it has on the drinker, ie. drunk, revives, makes alert, gives strength(??)
 
 	function __construct()
 	{
