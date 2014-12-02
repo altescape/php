@@ -5,7 +5,7 @@
  * Time: 09:30
  */
 
-namespace DesignPatterns\DecoratorPattern;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern;
 
 class Bev_Espresso implements BeverageInterface {
 

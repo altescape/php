@@ -5,7 +5,7 @@
  * Time: 20:24
  */
 
-namespace DesignPatterns\DecoratorPattern2;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern2;
 
 
 interface MealInterface

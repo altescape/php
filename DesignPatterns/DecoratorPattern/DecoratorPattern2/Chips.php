@@ -5,7 +5,7 @@
  * Time: 20:31
  */
 
-namespace DesignPatterns\DecoratorPattern2;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern2;
 
 
 class Chips extends SidesDecorator

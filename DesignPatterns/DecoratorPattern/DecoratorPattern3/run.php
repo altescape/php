@@ -5,9 +5,9 @@
  * Time: 21:52
  */
 
-namespace DesignPatterns\DecoratorPattern3;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern3;
 
-require_once '../../loader.php';
+require_once '../../../loader.php';
 
 $water = new Drink();
 
@@ -18,4 +18,4 @@ $water->container = 'glass';
 $water->temperature = 'cool';
 $water->result = 'revives';
 
-var_dump($water);
+print_r($water);

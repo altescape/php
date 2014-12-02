@@ -5,7 +5,7 @@
  * Time: 20:28
  */
 
-namespace DesignPatterns\DecoratorPattern2;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern2;
 
 
 abstract class DrinksDecorator implements MealInterface

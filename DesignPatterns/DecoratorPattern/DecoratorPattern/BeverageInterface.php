@@ -5,7 +5,7 @@
  * Time: 09:21
  */
 
-namespace DesignPatterns\DecoratorPattern;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern;
 
 interface BeverageInterface
 {

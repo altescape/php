@@ -5,7 +5,7 @@
  * Time: 09:34
  */
 
-namespace DesignPatterns\DecoratorPattern;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern;
 
 class Sze_Medium extends SizeDecorator {
 

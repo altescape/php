@@ -5,9 +5,9 @@
  * Time: 21:49
  */
 
-namespace DesignPatterns\DecoratorPattern3;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern3;
 
-require_once '../../loader.php';
+require_once '../../../loader.php';
 
 abstract class DrinksContainerDecorator implements DrinkInterface
 {

@@ -5,9 +5,9 @@
  * Time: 20:34
  */
 
-namespace DesignPatterns\DecoratorPattern2;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern2;
 
-require_once '../../loader.php';
+require_once '../../../loader.php';
 
 class OrderMeal {
 

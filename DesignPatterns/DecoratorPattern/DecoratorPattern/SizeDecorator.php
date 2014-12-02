@@ -5,7 +5,7 @@
  * Time: 09:26
  */
 
-namespace DesignPatterns\DecoratorPattern;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern;
 
 abstract class SizeDecorator implements BeverageInterface
 {

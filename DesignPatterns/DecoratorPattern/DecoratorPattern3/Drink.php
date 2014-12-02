@@ -5,7 +5,7 @@
  * Time: 21:56
  */
 
-namespace DesignPatterns\DecoratorPattern3;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern3;
 
 
 class Drink extends DrinksContainerDecorator implements DrinkInterface

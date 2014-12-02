@@ -5,7 +5,7 @@
  * Time: 20:27
  */
 
-namespace DesignPatterns\DecoratorPattern2;
+namespace DesignPatterns\DecoratorPattern\DecoratorPattern2;
 
 
 class Burger implements MealInterface
