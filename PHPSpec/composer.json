@@ -1,0 +1,21 @@
+{
+  "name": "mike/phpspectest",
+  "description": "PHP Spec Testing",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "author's name",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "phpspec/phpspec": "2.1.1"
+  },
+  "autoload": {
+    "psr-0": { "": "src/" }
+  },
+  "config": {
+    "bin-dir": "bin"
+  }
+}
